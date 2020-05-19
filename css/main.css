@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Source Sans Pro';
+    background:red;
+    margin:0;
+    color:white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "navbar-area"
+        "mission-area"
+        "values-area";
+}
+
+a {
+    text-decoration:none;
+    color:red;
+    font-size:1.8em;
+    font-weight: 700;
+}
+
+img { 
+    width:150px;
+    justify-self: center;
+}
+
+header {
+    background:#FFFFFF;
+    padding: 1em;
+    grid-area: navbar-area;
+}
+
+.container {
+    padding: 4em 1em;
+    display: grid;
+    grid-template-columns: 66% auto;
+    grid-area: mission-area;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer {
+    background: #571212;
+    grid-area: values-area;
+}
+
+ul {
+    margin:0;padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+ul li {
+    padding: 2em;
+    color: #E98A8A;
+    list-style-type: none;
+}
+
+ul li span {
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        grid-template-areas: 
+        "navbar-area"
+        "values-area"
+        "mission-area";      
+    }
+
+    ul, .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .container {
+        text-align: center;
+    }
+}
